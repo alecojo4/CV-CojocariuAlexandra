@@ -1,0 +1,223 @@
+/* Stilurile de bază și tipografie */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #f4f4f4, #ddd);
+    padding-top: 20px;
+    font-size: 18px; /* Am adăugat dimensiunea fontului pentru a mări textul */
+}
+
+/* Header */
+header {
+    background: linear-gradient(270deg, #1a5276, #2e4053);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+header p {
+    color: #ddd;
+    font-size: 20px;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+/* Link-uri în header */
+header a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header:hover h1 {
+    transform: rotate(-2deg);
+}
+
+header:hover p {
+    opacity: 0.7;
+}
+
+header a:hover::after {
+    content: "Check this out";
+    display: block;
+    color: #ffffff; /* sau orice altă culoare dorită */
+    font-style: italic; /* sau orice alte stiluri de text dorite */
+}
+header a {
+    position: relative; /* Adaugăm position: relative pentru a poziționa corect pseudo-elementul */
+}
+
+header a::after {
+    content: "Check this out";
+    position: absolute; /* Poziționăm mesajul absolut în cadrul link-ului */
+    top: 100%; /* Poziționăm mesajul sub link */
+    left: 50%; /* Centrăm mesajul pe orizontală */
+    transform: translateX(-50%); /* Centrăm mesajul pe orizontală */
+    opacity: 0; /* Inițial, mesajul va fi invizibil */
+    background-color: rgba(255, 255, 0, 0.05); /* Adăugăm o culoare de fundal semi-transparentă */
+    padding: 5px 10px; /* Adăugăm un spațiu în jurul textului */
+    border-radius: 5px; /* Adăugăm colțuri rotunjite pentru un aspect mai plăcut */
+    transition: opacity 0.3s ease; /* Adăugăm o tranziție pentru proprietatea opacity */
+}
+
+header a:hover::after {
+    opacity: 1; /* La hover, mesajul va deveni vizibil */
+}
+a:hover, button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+    /* Stiluri pentru ecrane mai mici */
+}
+
+/* Navigație și link-uri */
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #157efb;
+}
+
+/* Secțiuni și stiluri generale */
+section {
+    padding: 20px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: none;
+}
+
+section:target {
+    display: block;
+}
+
+section:hover {
+    transform: scale(1.01);
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+h3 {
+    color: #555; /* Schimbăm culoarea pentru a face numele secțiunii mai puțin pronunțate */
+    font-size: 24px; /* Dimensiunea redusă pentru a le diferenția de titlurile principale */
+    margin-bottom: 10px; /* O mică separare între numele secțiunii și conținutul acesteia */
+}
+
+p, section a {
+    transition: opacity 0.3s ease;
+}
+
+section a {
+    display: inline-block;
+    background: #157efb;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+section a:hover {
+    background-color: #0d5aa3;
+    transform: translateY(-2px);
+}
+
+/* Definirea animației pentru skill-uri */
+@keyframes gradientAnimation {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stiluri pentru secțiunea "Skills" */
+#skills ul li {
+    margin-bottom: 10px;
+    opacity: 0; /* Setăm inițial opacitatea la 0 */
+}
+
+/* Aplicăm animația cu întârzieri diferite pentru fiecare skill */
+#skills ul li:nth-child(1) { animation: fadeIn 1s ease 0.5s forwards; }
+#skills ul li:nth-child(2) { animation: fadeIn 1s ease 1s forwards; }
+#skills ul li:nth-child(3) { animation: fadeIn 1s ease 1.5s forwards; }
+#skills ul li:nth-child(4) { animation: fadeIn 1s ease 2.0s forwards; }
+#skills ul li:nth-child(5) { animation: fadeIn 1s ease 2.5s forwards; }
+#skills ul li:nth-child(6) { animation: fadeIn 1s ease 3.0s forwards; }
+#skills ul li:nth-child(7) { animation: fadeIn 1s ease 3.5s forwards; }
+/* Și așa mai departe pentru fiecare element li */
+
+#skills ul li strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#skills ul ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#skills ul ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#skills ul ul li:before {
+    content: "•";
+    margin-right: 5px;
+}
+
+/* ... (restul codului pentru stilizarea skill-urilor și a altor secțiuni) ... */
