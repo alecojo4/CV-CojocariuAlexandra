@@ -116,6 +116,7 @@ nav a:hover {
 
 /* Secțiuni și stiluri generale */
 section {
+    display: none;
     padding: 20px;
     margin: 15px;
     background-color: #fff;
@@ -125,7 +126,9 @@ section {
     position: relative;
     display: none;
 }
-
+.active-section {
+    display: block;
+}
 section:target {
     display: block;
 }
