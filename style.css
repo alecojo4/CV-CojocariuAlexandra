@@ -201,7 +201,9 @@ section a:hover {
 #skills ul li:nth-child(6) { animation: fadeIn 1s ease 3.0s forwards; }
 #skills ul li:nth-child(7) { animation: fadeIn 1s ease 3.5s forwards; }
 #skills ul li:nth-child(8) { animation: fadeIn 1s ease 4.0s forwards; }
-#skills ul li:nth-child(8) { animation: fadeIn 1s ease 4.5s forwards; }
+#skills ul li:nth-child(9) { animation: fadeIn 1s ease 4.5s forwards; }
+#skills ul li:nth-child(10) { animation: fadeIn 1s ease 5.0s forwards; }
+#skills ul li:nth-child(11) { animation: fadeIn 1s ease 5.5s forwards; }
 /* Și așa mai departe pentru fiecare element li */
 
 #skills ul li strong {
@@ -242,7 +244,8 @@ section a:hover {
 #education ul li:nth-child(5) { animation: fadeIn 1s ease 2.5s forwards; }
 #education ul li:nth-child(6) { animation: fadeIn 1s ease 3.0s forwards; }
 #education ul li:nth-child(7) { animation: fadeIn 1s ease 3.5s forwards; }
-#education ul li:nth-child(7) { animation: fadeIn 1s ease 4.0s forwards; }
+#education ul li:nth-child(8) { animation: fadeIn 1s ease 4.0s forwards; }
+#education ul li:nth-child(9) { animation: fadeIn 1s ease 4.5s forwards; }
 /* Adăugăm mai multe linii pentru fiecare element li, dacă este nevoie */
 
 #education ul li:before {
