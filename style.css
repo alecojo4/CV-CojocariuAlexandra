@@ -201,6 +201,7 @@ section a:hover {
 #skills ul li:nth-child(6) { animation: fadeIn 1s ease 3.0s forwards; }
 #skills ul li:nth-child(7) { animation: fadeIn 1s ease 3.5s forwards; }
 #skills ul li:nth-child(8) { animation: fadeIn 1s ease 4.0s forwards; }
+#skills ul li:nth-child(8) { animation: fadeIn 1s ease 4.5s forwards; }
 /* Și așa mai departe pentru fiecare element li */
 
 #skills ul li strong {
